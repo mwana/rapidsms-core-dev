@@ -171,6 +171,9 @@ class TestScript (TransactionTestCase, LoggerMixin):
 
     def runScript (self, script):
         self.runParsedScript(self.parseScript(script))
+        # take a break to allow the router thread to catch up; otherwise it may
+        # be in a bad state when accessed afterwards in the test
+        time.sleep(.1)
 
 class MockTestScript (TestScript):
     apps = (EchoApp,)

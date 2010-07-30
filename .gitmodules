@@ -8,5 +8,5 @@
 
 [submodule "submodules/django-tables"]
 	path = submodules/django-tables
-	url = git://github.com/adammck/django-tables.git
+	url = git://github.com/mwana/django-tables.git
 
